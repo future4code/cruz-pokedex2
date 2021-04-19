@@ -7,7 +7,7 @@ const PokeCard = (props) => {
       <PokeImgs alt={props.poke.name} src={props.poke.sprites.front_default} />
       {/* na API a foto do pokemon, de frente, está dentro de Sprites{front_default} */}
       <ButtonContainer>
-        <button>Adicionar a Pokédex </button>
+        <button>{props.title}</button>
         <button>Ver Detalhes</button>
       </ButtonContainer>
     </CardContainer>
