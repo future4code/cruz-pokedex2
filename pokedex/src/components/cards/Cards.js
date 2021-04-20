@@ -1,4 +1,4 @@
-/* import React from 'react '; */
+import React from 'react'
 import { CardContainer, PokeImgs, ButtonContainer } from "./styled";
 
 const PokeCard = (props) => {
