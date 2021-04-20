@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="895ffc71-1328-4b40-8a58-1dd15fb70f5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/DetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/DetailsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618876496256</updated>
       <workItem from="1618876500192" duration="156000" />
-      <workItem from="1618934690370" duration="1243000" />
+      <workItem from="1618934690370" duration="2377000" />
     </task>
     <servers />
   </component>
@@ -48,7 +51,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="header-samuel" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
