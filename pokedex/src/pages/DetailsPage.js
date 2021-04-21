@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components';
 import Header from '../components/Header'
+import ContextPokemons from '../contexts/contexts'
 
 const Container = styled.div`
   width: 100vw;
@@ -39,6 +40,8 @@ const DivTypeAndMoves = styled(DivImage)`
 `
 
 export default function DetailsPage(){
+  const pokemons = useContext(ContextPokemons)
+  console.log('pokemons details page: ', pokemons)
   return(
     <Container>
       <Header />
