@@ -2,10 +2,6 @@ import axios from "axios"
 import { useState } from "react"
 import { baseUrl } from "../constants/urls"
 
-function message(msg){
-  if(typeof msg==='string' && msg.length>0)alert(msg)
-}
-
 //-------------------------------------GET
 export const useGetApi=()=>{
   const [value, setValue] = useState()

@@ -1,4 +1,4 @@
-import ContextPokemonsAdded from './contexts/contexts'
+import ContextPokemons from './contexts/contexts'
 import {useGetApi} from './hooks/useRequest'
 import React, {useState, useEffect} from 'react'
 import HomePage from './pages/HomePage'
@@ -10,13 +10,23 @@ function App() {
   const [pokemonListUrl, getApiPokemonListUrl] = useGetApi()
   const [auxApi, getAuxApi] = useGetApi()
   const [pokemons, setPokemons] = useState([])
+  const [pokemonsAdded, setPokemonsAdded] = useState([])
+  const [allPokemons, setAllPokemons] = useState([])
+
+  const addPoke=(pokemon)=>{
+    //  adicionar aqui pokemons selecionados
+    console.log('cliquei no "Adicionar a pokedex"')
+  }
+
+  const removePoke=(pokemon)=>{
+    //  remover dos pokemons selecionados
+  }
 
   useEffect(()=>{
     getApiPokemonListUrl('pokemon?limit=5', null, (res, setValue)=>{
       setValue(res.data)
     })
   },[])
-
   useEffect(()=>{
     if(pokemonListUrl && pokemonListUrl.results) {
       if(pokemons.length<pokemonListUrl.results.length) {
@@ -52,9 +62,12 @@ function App() {
     }
   },[pokemons, pokemonListUrl])
 
+  useEffect(()=>{
+    setAllPokemons({pokemons, pokemonsAdded, addPoke, removePoke})
+  },[pokemons, pokemonsAdded])
 
   return (
-    <ContextPokemonsAdded.Provider value={pokemons}>
+    <ContextPokemons.Provider value={allPokemons}>
       <BrowserRouter>
         <Switch>
           <Route exact path={'/'}>
@@ -68,7 +81,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </ContextPokemonsAdded.Provider>
+    </ContextPokemons.Provider>
   );
 }
 

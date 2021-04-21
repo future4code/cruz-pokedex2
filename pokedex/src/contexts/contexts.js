@@ -1,4 +1,4 @@
 import React from 'react'
 
-const ContextPokemonsAdded = React.createContext()
-export default ContextPokemonsAdded
+const ContextPokemons = React.createContext()
+export default ContextPokemons
