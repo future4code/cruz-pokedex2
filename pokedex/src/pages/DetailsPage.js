@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components';
 import Header from '../components/Header'
 
@@ -39,6 +38,7 @@ const DivTypeAndMoves = styled(DivImage)`
 `
 
 export default function DetailsPage(){
+
   return(
     <Container>
       <Header />

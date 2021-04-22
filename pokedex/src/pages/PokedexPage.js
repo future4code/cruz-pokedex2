@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header'
 import Cards from '../components/cards/Cards'
@@ -20,6 +20,7 @@ const ContainerContent = styled.div`
 `
 
 export default function PokedexPage(){
+
   return(
     <Container>
       <Header />
