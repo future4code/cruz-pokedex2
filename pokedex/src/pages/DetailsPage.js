@@ -83,11 +83,6 @@ const Moves = styled.div`
 export default function DetailsPage(){
   const history = useHistory();
   const {states} = useContext(ContextPokemons)
-  if(states.pokemonDetails===undefined){
-    console.log('entrei', states.pokemonDetails)
-    history.push("/")
-  }
-
   const {pokemonDetails} = states
 
   const typesRendered = pokemonDetails.types.map((type)=>{
@@ -103,9 +98,9 @@ export default function DetailsPage(){
     )
   })
 
-  return(
-    <Container>
-      <Header />
+  let allRendered = <div>Carregando</div>
+  if(pokemonDetails.name){
+    allRendered = (
       <ContainerContent>
         <DivImage>
           <h1>{pokemonDetails.name}</h1>
@@ -131,6 +126,13 @@ export default function DetailsPage(){
           </Moves>
         </DivTypesAndMoves>
       </ContainerContent>
+    )
+  }
+
+  return(
+    <Container>
+      <Header />
+      {allRendered}
     </Container>
   )
 }

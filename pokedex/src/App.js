@@ -13,6 +13,7 @@ function App() {
   const [auxPokes, setAuxPokes] = useState([])
   const [pokemons, setPokemons] = useState([])
   const [pokemonsAdded, setPokemonsAdded] = useState([])
+  const [pokemonDetails, setPokemonDetails] = useState({})
 
   const addPoke=(pokemon)=>{
 
@@ -80,8 +81,8 @@ function App() {
     }
   },[auxPokes])
 
-  const states = {pokemons, pokemonsAdded }
-  const setters ={setPokemons, setPokemonsAdded}
+  const states = {pokemons, pokemonsAdded, pokemonDetails}
+  const setters ={setPokemons, setPokemonsAdded, setPokemonDetails}
   const functions = {addPoke, removePoke}
 
   return (
