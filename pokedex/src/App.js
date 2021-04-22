@@ -12,7 +12,7 @@ function App() {
   const [auxApi, getAuxApi] = useGetApi()
   const [pokemons, setPokemons] = useState([])
   const [pokemonsAdded, setPokemonsAdded] = useState([])
-  const [allPokemons, setAllPokemons] = useState([])
+  const [pokemonDetails, setPokemonDetails] = useState({})
 
   const addPoke=(pokemon)=>{
     //  adicionar aqui pokemons selecionados
@@ -63,12 +63,16 @@ function App() {
     }
   },[pokemons, pokemonListUrl])
 
-  useEffect(()=>{
-    setAllPokemons({pokemons, pokemonsAdded, addPoke, removePoke})
-  },[pokemons, pokemonsAdded])
+  const states = {
+    pokemons, pokemonsAdded, pokemonDetails
+  }
+
+  const setters = {
+    setPokemons, setPokemonsAdded, setPokemonDetails
+  }
 
   return (
-    <ContextPokemons.Provider value={{allPokemons}}>
+    <ContextPokemons.Provider value={{states, setters}}>
       <BrowserRouter>
         <Switch>
           <Route exact path={'/'}>
