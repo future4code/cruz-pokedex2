@@ -15,16 +15,25 @@ function App() {
   const [allPokemons, setAllPokemons] = useState([])
 
   const addPoke=(pokemon)=>{
-    //  adicionar aqui pokemons selecionados
-    console.log('cliquei no "Adicionar a pokedex"')
+
+    const newList = [...pokemonsAdded, pokemon];
+    setPokemonsAdded(newList)
+    alert(`${pokemon.name} foi adicionado à Pokedex`)
+    const pokemonIndex = pokemons.findIndex((poke) => poke.name === pokemon.name )
+    const withdrawn = pokemons.splice(pokemonIndex, 1)
+    setPokemons(withdrawn)
   }
 
   const removePoke=(pokemon)=>{
-    //  remover dos pokemons selecionados
+    const pokemonIndex = pokemonsAdded.findIndex((poke) => poke.name === pokemon.name )
+    const withdrawn = [...pokemonsAdded]
+    withdrawn.splice(pokemonIndex, 1)
+    setPokemonsAdded(withdrawn)
+    console.log(withdrawn)
   }
 
   useEffect(()=>{
-    getApiPokemonListUrl('pokemon?limit=5', null, (res, setValue)=>{
+    getApiPokemonListUrl('pokemon?limit=20', null, (res, setValue)=>{
       setValue(res.data)
     })
   },[])
@@ -67,8 +76,12 @@ function App() {
     setAllPokemons({pokemons, pokemonsAdded, addPoke, removePoke})
   },[pokemons, pokemonsAdded])
 
+  const states = {pokemons, pokemonsAdded }
+  const setters ={setPokemons, setPokemonsAdded}
+  const functions = {addPoke, removePoke}
+
   return (
-    <ContextPokemons.Provider value={allPokemons}>
+    <ContextPokemons.Provider value={{states, setters, functions }}>
       <BrowserRouter>
         <Switch>
           <Route exact path={'/'}>

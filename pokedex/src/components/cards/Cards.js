@@ -4,8 +4,7 @@ import ContextPokemons from '../../contexts/contexts'
 import { CardContainer, PokeImgs, ButtonContainer } from "./styled";
 
 const PokeCard = (props) => {
-  const {addPoke} = useContext(ContextPokemons)
-  const {removePoke} = useContext(ContextPokemons)
+  const {functions} = useContext(ContextPokemons)
 
   return (
     <CardContainer>
@@ -13,9 +12,9 @@ const PokeCard = (props) => {
       <p>{props.poke.name}</p>
       <ButtonContainer>
         {props.home ? (
-          <button onClick={()=>addPoke(props.poke)}>{props.title}</button>
+          <button onClick={()=>functions.addPoke(props.poke)}>{props.title}</button>
         ):(
-          <button onClick={()=>removePoke(props.poke)}>{props.title}</button>
+          <button onClick={()=>functions.removePoke(props.poke)}>{props.title}</button>
         )
         }
 
