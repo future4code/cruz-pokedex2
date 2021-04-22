@@ -23,7 +23,10 @@ export default function PokedexPage(){
 
   return(
     <Container>
-      <Header />
+      <Header 
+      title={'Pokédex'}
+      buttonTitle={'Voltar para lista de pokemons'}
+      />
       <ContainerContent>
         {/* aqui vai a lista de Cards */}
       </ContainerContent>
