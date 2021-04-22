@@ -10,9 +10,10 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 function App() {
   const [pokemonListUrl, getApiPokemonListUrl] = useGetApi()
   const [auxApi, getAuxApi] = useGetApi()
+  const [auxPokes, setAuxPokes] = useState([])
   const [pokemons, setPokemons] = useState([])
   const [pokemonsAdded, setPokemonsAdded] = useState([])
-  const [allPokemons, setAllPokemons] = useState([])
+  const [pokemonDetails, setPokemonDetails] = useState({})
 
   const addPoke=(pokemon)=>{
 
@@ -20,7 +21,9 @@ function App() {
     setPokemonsAdded(newList)
     alert(`${pokemon.name} foi adicionado à Pokedex`)
     const pokemonIndex = pokemons.findIndex((poke) => poke.name === pokemon.name )
-    const withdrawn = pokemons.splice(pokemonIndex, 1)
+    const withdrawn = [...pokemons]
+    withdrawn.splice(pokemonIndex, 1)
+    console.log('widthdrawn: ', withdrawn)
     setPokemons(withdrawn)
   }
 
@@ -39,8 +42,8 @@ function App() {
   },[])
   useEffect(()=>{
     if(pokemonListUrl && pokemonListUrl.results) {
-      if(pokemons.length<pokemonListUrl.results.length) {
-        const poke = pokemonListUrl.results[pokemons.length]
+      if(auxPokes.length<pokemonListUrl.results.length) {
+        const poke = pokemonListUrl.results[auxPokes.length]
         getAuxApi(poke.url.replace('https://pokeapi.co/api/v2/', ''), null, (res, setValue) => {
           const body = {}
           body.name = res.data.name
@@ -65,19 +68,21 @@ function App() {
           }
           body.moves = [auxMoves]
 
-          const aux = [...pokemons, body]
-          setPokemons(aux)
+          const aux = [...auxPokes, body]
+          setAuxPokes(aux)
         })
       }
     }
-  },[pokemons, pokemonListUrl])
+  },[auxPokes, pokemonListUrl])
 
   useEffect(()=>{
-    setAllPokemons({pokemons, pokemonsAdded, addPoke, removePoke})
-  },[pokemons, pokemonsAdded])
+    if(auxPokes.length===20){
+      setPokemons(auxPokes)
+    }
+  },[auxPokes])
 
-  const states = {pokemons, pokemonsAdded }
-  const setters ={setPokemons, setPokemonsAdded}
+  const states = {pokemons, pokemonsAdded, pokemonDetails}
+  const setters ={setPokemons, setPokemonsAdded, setPokemonDetails}
   const functions = {addPoke, removePoke}
 
   return (

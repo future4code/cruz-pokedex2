@@ -1,10 +1,10 @@
 import React, {useContext} from 'react'
 import ContextPokemons from '../../contexts/contexts'
-
+import {Link} from 'react-router-dom'
 import { CardContainer, PokeImgs, ButtonContainer } from "./styled";
 
 const PokeCard = (props) => {
-  const {functions} = useContext(ContextPokemons)
+  const {functions, setters} = useContext(ContextPokemons)
 
   return (
     <CardContainer>
@@ -18,7 +18,7 @@ const PokeCard = (props) => {
         )
         }
 
-        <button>Ver Detalhes</button>
+        <Link onClick={()=>{setters.setPokemonDetails(props.poke)}} to={'/details'}>Ver Detalhes</Link>
       </ButtonContainer>
     </CardContainer>
   );
