@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import ContextPokemons from '../../contexts/contexts'
+
 import { CardContainer, PokeImgs, ButtonContainer } from "./styled";
 
 const PokeCard = (props) => {
@@ -17,6 +18,7 @@ const PokeCard = (props) => {
           <button onClick={()=>removePoke(props.poke)}>{props.title}</button>
         )
         }
+
         <button>Ver Detalhes</button>
       </ButtonContainer>
     </CardContainer>

@@ -6,6 +6,7 @@ import DetailsPage from './pages/DetailsPage'
 import PokedexPage from './pages/PokedexPage'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
+
 function App() {
   const [pokemonListUrl, getApiPokemonListUrl] = useGetApi()
   const [auxApi, getAuxApi] = useGetApi()

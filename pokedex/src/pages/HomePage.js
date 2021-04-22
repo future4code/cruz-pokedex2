@@ -1,3 +1,4 @@
+
 import React, {useContext} from 'react';
 import PokeCard from '../components/cards/Cards';
 import Header from '../components/Header';
@@ -36,10 +37,12 @@ const HomePage  = () => {
   return(
     <Container>
       <Header/>
+
       <Content>
         {cardsRendered}
       </Content>
     </Container>
+
   )
 }
 export default HomePage;
