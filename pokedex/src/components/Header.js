@@ -12,11 +12,9 @@ const HeaderContainer = styled.div`
   justify-content: center;
   color: black;
   h1{
-    position: absolute;
     color: #061746;
     }
     button{
-      margin-right: 180vh;
       padding: 8px;
       font-weight: bold;
       cursor: pointer;
@@ -30,9 +28,10 @@ const HeaderContainer = styled.div`
 
 const Header = (props) => {
   const history = useHistory()
+  console.log('header', props.buttonTitle)
   return(
     <HeaderContainer>
-      <button onClick={() => history.push('/pokedex')}>{props.buttonTitle}</button>
+      <button onClick={props.goTo}>{props.buttonTitle}</button>
       <h1>{props.title}</h1>
       {
         props.details &&

@@ -25,6 +25,8 @@ const HomePage  = () => {
   const history = useHistory()
   const { states} = useContext(ContextPokemons)
 
+  const goToPokedex = ()=>{history.push('/pokedex')}
+
   let cardsRendered
   if(states.pokemons) {
     cardsRendered = states.pokemons.map((poke, index) => {
@@ -44,6 +46,7 @@ const HomePage  = () => {
       <Header
         buttonTitle={'Ir para a Pokedex'}
         title={'Lista de Pokemons'}
+        goTo = {goToPokedex}
       />
              <Content>
         {cardsRendered}

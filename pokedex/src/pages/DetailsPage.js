@@ -131,7 +131,10 @@ export default function DetailsPage(){
 
   return(
     <Container>
-      <Header />
+      <Header details={true}
+        goTo ={()=>history.goBack()}
+        buttonTitle={'Voltar'}
+      />
       {allRendered}
     </Container>
   )
