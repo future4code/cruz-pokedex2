@@ -4,11 +4,7 @@
     <list default="true" id="895ffc71-1328-4b40-8a58-1dd15fb70f5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cards/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/contexts.js" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/contexts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useRequest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/DetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/DetailsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HomePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +34,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.rainbow.brackets" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -51,6 +47,8 @@
       <updated>1618876496256</updated>
       <workItem from="1618876500192" duration="156000" />
       <workItem from="1618934690370" duration="2377000" />
+      <workItem from="1619102173596" duration="1031000" />
+      <workItem from="1619103235498" duration="4110000" />
     </task>
     <servers />
   </component>
@@ -79,5 +77,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

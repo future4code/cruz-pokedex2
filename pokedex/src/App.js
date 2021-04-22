@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 import HomePage from './pages/HomePage'
 import DetailsPage from './pages/DetailsPage'
 import PokedexPage from './pages/PokedexPage'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
   },[pokemons, pokemonsAdded])
 
   return (
-    <ContextPokemons.Provider value={allPokemons}>
+    <ContextPokemons.Provider value={{allPokemons}}>
       <BrowserRouter>
         <Switch>
           <Route exact path={'/'}>
