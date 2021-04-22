@@ -2,12 +2,17 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   width: 250px;
-  height: 350px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  border: 1px solid black; // depois apaga ou não rs.
+  border: 3px solid #061746; // depois apaga ou não rs.
+  border-radius: 10px;
+  p{
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 `;
 
 export const PokeImgs = styled.img`
@@ -20,7 +25,12 @@ export const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 180px;
+  width: 95%;
   height: 35px;
   padding: 10px;
+  button{
+    cursor: pointer;
+    padding: 5px;
+    font-weight: bold;
+  }
 `;

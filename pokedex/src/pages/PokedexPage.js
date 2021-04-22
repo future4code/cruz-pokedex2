@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header'
-import Cards from '../components/cards/Cards'
+import PokeCard from '../components/cards/Cards'
+import ContextPokemons from '../contexts/contexts'
 
 const Container = styled.div`
   width: 100vw;
@@ -20,7 +21,19 @@ const ContainerContent = styled.div`
 `
 
 export default function PokedexPage(){
+  const {states} = useContext(ContextPokemons)
 
+  let cardsRendered
+  if(states.pokemonsAdded) {
+    cardsRendered = states.pokemonsAdded.map((poke, index) => {
+      return (
+        <PokeCard key={index}
+          poke={poke}
+          title={'Remover da pokedex'}
+        />
+      )
+    })
+  }
   return(
     <Container>
       <Header 
@@ -28,7 +41,7 @@ export default function PokedexPage(){
       buttonTitle={'Voltar para lista de pokemons'}
       />
       <ContainerContent>
-        {/* aqui vai a lista de Cards */}
+        {cardsRendered}
       </ContainerContent>
     </Container>
   )
