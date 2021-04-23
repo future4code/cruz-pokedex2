@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="895ffc71-1328-4b40-8a58-1dd15fb70f5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cards/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/Cards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contexts/contexts.js" beforeDir="false" afterPath="$PROJECT_DIR$/contexts/contexts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/DetailsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/DetailsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PokedexPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PokedexPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,5 +77,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
