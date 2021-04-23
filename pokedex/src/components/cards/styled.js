@@ -7,10 +7,13 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  border: 3px solid #061746; // depois apaga ou não rs.
-  border-radius: 10px;
+  border: 3px solid #061746; 
+  border-radius: 6px;
+  background: rgb(23,78,179);
+  background: radial-gradient(circle, rgba(23,78,179,0.4962359943977591) 0%, rgba(36,164,167,0.7287289915966386) 51%, rgba(36,164,167,1) 99%, rgba(21,26,181,0.4514180672268907) 100%);
   p{
     font-weight: bold;
+    color: white;
     text-transform: uppercase;
   }
 `;
@@ -32,5 +35,7 @@ export const ButtonContainer = styled.div`
     cursor: pointer;
     padding: 5px;
     font-weight: bold;
+    color: white;
+    background-color: #2480a7;
   }
 `;
