@@ -54,31 +54,7 @@ const DivTypesAndMoves = styled(DivImage)`
   border: 1px solid black;
 `
 
-const Types = styled.div`
-  width: 100%;
-  height: 100px;
-  overflow-y: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  >p{
-    box-sizing: border-box;
-    padding: 0 5px;
-  }
-`
 
-const Moves = styled.div`
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  >h2{
-    align-self: center;
-  }
-`
 
 export default function DetailsPage(){
   const history = useHistory();

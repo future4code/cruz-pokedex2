@@ -1,22 +1,19 @@
 import React from "react";
-import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 
 import { HeaderContainer } from "./styled";
 
 const Header = (props) => {
-  const history = useHistory();
-  return (
+  console.log('header', props.buttonTitle)
+  return(
     <HeaderContainer>
-      <button onClick={() => history.push("/pokedex")}>
-        {props.buttonTitle}
-      </button>
+      <button onClick={props.goTo}>{props.buttonTitle}</button>
       <h1>{props.title}</h1>
-      {props.details && (
-        <button onClick={props.idPokemon}>Adicionar/Remover da pokedex</button>
-      )}
+      {
+        props.details &&
+          <button onClick={props.idPokemon}>Adicionar/Remover da pokedex</button>
+      }
     </HeaderContainer>
-  );
-};
+  )
+}
 
 export default Header;

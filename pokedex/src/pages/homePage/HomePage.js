@@ -6,29 +6,38 @@ import { useGetApi } from "../../hooks/useRequest";
 import ContextPokemons from "../../contexts/contexts";
 import { Container, Content } from "./styled";
 
-const HomePage = () => {
-  const history = useHistory();
-  const { states } = useContext(ContextPokemons);
+const HomePage  = () => {
+  const history = useHistory()
+  const { states} = useContext(ContextPokemons)
 
-  let cardsRendered;
-  if (states.pokemons) {
+  const goToPokedex = ()=>{history.push('/pokedex')}
+
+  let cardsRendered
+  if(states.pokemons) {
     cardsRendered = states.pokemons.map((poke, index) => {
       return (
-        <PokeCard
-          key={index}
+        <PokeCard key={index}
           poke={poke}
-          title={"Adicionar à pokédex"}
+          
+          title={'Adicionar à pokedex'}
           home={true}
         />
-      );
-    });
+      )
+    })
   }
 
-  return (
+  return(
     <Container>
-      <Header buttonTitle={"Ir para Pokédex"} title={"Lista de Pokémons"} />
-      <Content>{cardsRendered}</Content>
+      <Header
+        buttonTitle={'Ir para a Pokedex'}
+        title={'Lista de Pokemons'}
+        goTo = {goToPokedex}
+      />
+             <Content>
+        {cardsRendered}
+      </Content>
     </Container>
-  );
-};
+
+  )
+}
 export default HomePage;

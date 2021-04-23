@@ -37,3 +37,29 @@ export const Stats = styled(DivImage)`
 export const DivTypeAndMoves = styled(DivImage)`
   width: 48%;
 `;
+
+export const Types = styled.div`
+  width: 100%;
+  height: 100px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  >p{
+    box-sizing: border-box;
+    padding: 0 5px;
+  }
+`
+
+export const Moves = styled.div`
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  >h2{
+    align-self: center;
+  }
+`
