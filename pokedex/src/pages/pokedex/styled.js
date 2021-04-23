@@ -7,9 +7,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #b3d3e0;
-  button{
-    margin-left: 20px;
-    width: 300px;
+  h1{
+    left: 600px;
+  }
+  @media(max-width: 600px){
+    h1{
+      left: 270px;
+      font-size: 24px;
+    }
   }
 `
 
@@ -20,4 +25,8 @@ export const ContainerContent = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 80px;
+  a{
+    padding: 0;
+    text-align: center;
+  }
 `

@@ -5,7 +5,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #b3d3e0;
-  
+  @media(max-width: 600px){
+    h1{
+      right: 42px;
+      font-size: 24px;
+    }
+  }
 `
 
 export const Content = styled.div`

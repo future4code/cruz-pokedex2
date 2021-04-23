@@ -7,8 +7,8 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  border: 3px solid #061746; 
-  border-radius: 6px;
+  border: 3px solid #061740; 
+  border-radius: 8px;
   background: rgb(23,78,179);
   background: radial-gradient(circle, rgba(23,78,179,0.4962359943977591) 0%, rgba(36,164,167,0.7287289915966386) 51%, rgba(36,164,167,1) 99%, rgba(21,26,181,0.4514180672268907) 100%);
   p{
@@ -37,5 +37,15 @@ export const ButtonContainer = styled.div`
     font-weight: bold;
     color: white;
     background-color: #2480a7;
+    border: 1px solid green;
+    
   }
+  a{
+      text-decoration: none;
+      color: white;
+      background-color: #2480a7;
+      font-weight: 500;
+      padding: 2px 0;
+      border: 1px solid green;
+    }
 `;
