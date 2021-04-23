@@ -1,15 +1,16 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Kelvia Santos
+- Milena Ribeiro
+- Samuel Ripes
 
 Link do Surge: www.link.com.br
 
 O que funciona:
-- Item 1
-- Item 2
+- Adicioanr pokémons à pokedex
+- Remover pokémons da pokédex
+- Ver detalhes do Pokémon
 
 O que não funciona: 
 - Item 3
