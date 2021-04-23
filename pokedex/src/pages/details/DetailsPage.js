@@ -1,10 +1,16 @@
+import React, {useContext} from 'react'
+import ContextPokemons from '../../contexts/contexts'
+import {useHistory} from 'react-router-dom'
 import Header from "../../components/header/Header";
+
 import {
   Container,
   ContainerContent,
   DivImage,
   Stats,
-  DivTypeAndMoves,
+  DivTypesAndMoves,
+  Types,
+  Moves,
 } from "./styled";
 
 export default function DetailsPage(){

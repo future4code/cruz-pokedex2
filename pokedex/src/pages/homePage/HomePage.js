@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import PokeCard from "../../components/cards/Cards";
 import Header from "../../components/header/Header";
-import { useGetApi } from "../../hooks/useRequest";
 import ContextPokemons from "../../contexts/contexts";
 import { Container, Content } from "./styled";
 
@@ -29,11 +28,11 @@ const HomePage  = () => {
   return(
     <Container>
       <Header
-        buttonTitle={'Ir para a Pokedex'}
-        title={'Lista de Pokemons'}
+        buttonTitle={'Ir para a Pokédex'}
+        title={'Lista de Pokémons'}
         goTo = {goToPokedex}
       />
-             <Content>
+      <Content>
         {cardsRendered}
       </Content>
     </Container>

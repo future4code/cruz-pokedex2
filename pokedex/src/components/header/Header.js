@@ -6,7 +6,7 @@ const Header = (props) => {
   console.log('header', props.buttonTitle)
   return(
     <HeaderContainer>
-      <button onClick={props.goTo}>{props.buttonTitle}</button>
+      <button type='button' onClick={props.goTo}>{props.buttonTitle}</button>
       <h1>{props.title}</h1>
       {
         props.details &&

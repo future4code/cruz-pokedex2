@@ -3,6 +3,7 @@ import Header from "../../components/header/Header";
 import PokeCard from "../../components/cards/Cards";
 import ContextPokemons from "../../contexts/contexts";
 import { Container, ContainerContent } from "./styled";
+import {useHistory} from 'react-router-dom';
 
 export default function PokedexPage(){
   const {states} = useContext(ContextPokemons)
@@ -25,7 +26,7 @@ export default function PokedexPage(){
     <Container>
       <Header 
       title={'Pokédex'}
-      buttonTitle={'Voltar para lista de pokemons'}
+      buttonTitle={'Voltar para lista de pokémons'}
       goTo = {goToHome}
       />
       <ContainerContent>
