@@ -10,7 +10,7 @@ const Header = (props) => {
       <h1>{props.title}</h1>
       {
         props.details &&
-          <button onClick={props.idPokemon}>Adicionar/Remover da pokedex</button>
+          <button onClick={props.addRemove}>Adicionar/Remover da pokedex</button>
       }
     </HeaderContainer>
   )

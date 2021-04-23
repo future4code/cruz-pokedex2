@@ -15,8 +15,9 @@ import {
 
 export default function DetailsPage(){
   const history = useHistory();
-  const {states} = useContext(ContextPokemons)
+  const {states, functions} = useContext(ContextPokemons)
   const {pokemonDetails} = states
+  const {addPoke, removePoke} = functions
 
   const typesRendered = pokemonDetails.types.map((type)=>{
     return(
@@ -30,6 +31,13 @@ export default function DetailsPage(){
       <p>{move}</p>
     )
   })
+
+  const addRemove = ()=>{
+    if(states.pokemonsAdded.findIndex((poke)=>poke.name===pokemonDetails.name)>=0){
+      removePoke(pokemonDetails)
+    }
+    else addPoke(pokemonDetails)
+  }
 
   let allRendered = <div>Carregando</div>
   if(pokemonDetails.name){
@@ -67,6 +75,7 @@ export default function DetailsPage(){
       <Header details={true}
         goTo ={()=>history.goBack()}
         buttonTitle={'Voltar'}
+        addRemove = {addRemove}
       />
       {allRendered}
     </Container>
