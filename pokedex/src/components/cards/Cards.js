@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
-import ContextPokemons from '../../contexts/contexts'
-import {Link} from 'react-router-dom'
+import React, { useContext } from "react";
+import ContextPokemons from "../../contexts/contexts";
+import { Link } from "react-router-dom";
 import { CardContainer, PokeImgs, ButtonContainer } from "./styled";
 
 const PokeCard = (props) => {
-  const {functions, setters} = useContext(ContextPokemons)
+  const { functions, setters } = useContext(ContextPokemons);
 
   return (
     <CardContainer>
@@ -12,13 +12,23 @@ const PokeCard = (props) => {
       <p>{props.poke.name}</p>
       <ButtonContainer>
         {props.home ? (
-          <button onClick={()=>functions.addPoke(props.poke)}>{props.title}</button>
-        ):(
-          <button onClick={()=>functions.removePoke(props.poke)}>{props.title}</button>
-        )
-        }
+          <button onClick={() => functions.addPoke(props.poke)}>
+            {props.title}
+          </button>
+        ) : (
+          <button onClick={() => functions.removePoke(props.poke)}>
+            {props.title}
+          </button>
+        )}
 
-        <Link onClick={()=>{setters.setPokemonDetails(props.poke)}} to={'/details'}>Ver Detalhes</Link>
+        <Link
+          onClick={() => {
+            setters.setPokemonDetails(props.poke);
+          }}
+          to={"/details"}
+        >
+          Ver Detalhes
+        </Link>
       </ButtonContainer>
     </CardContainer>
   );

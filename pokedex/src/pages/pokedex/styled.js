@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
@@ -7,16 +7,16 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #b3d3e0;
-  h1{
+  h1 {
     left: 600px;
   }
-  @media(max-width: 600px){
-    h1{
-      left: 270px;
+  @media (max-width: 600px) {
+    h1 {
+      left: 250px;
       font-size: 24px;
     }
   }
-`
+`;
 
 export const ContainerContent = styled.div`
   width: 90%;
@@ -25,8 +25,8 @@ export const ContainerContent = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 80px;
-  a{
+  a {
     padding: 0;
     text-align: center;
   }
-`
+`;
