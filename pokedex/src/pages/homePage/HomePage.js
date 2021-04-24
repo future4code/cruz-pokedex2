@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import PokeCard from "../../components/cards/Cards";
 import Header from "../../components/header/Header";
@@ -8,22 +8,16 @@ import { Container, Content } from "./styled";
 const HomePage = () => {
   const history = useHistory();
   const { states } = useContext(ContextPokemons);
+  const [loading, setLoading] = useState(true)
 
   const goToPokedex = () => {
     history.push("/pokedex");
   };
 
-  let cardsRendered;
-  if (states.pokemons) {
-    cardsRendered = states.pokemons.map((poke, index) => {
-      return (
-        <PokeCard
-          key={index}
-          poke={poke}
-          title={"Adicionar à pokedex"}
-          home={true}
-        />
-      );
+  const cardsRendered=()=>{
+    if(states.pokemons.length===0)return <div>Carregando</div>
+    else return states.pokemons.map((poke, index) => {
+      return <PokeCard key={index} home poke={poke} title={"Adicionar na pokedex"} />;
     });
   }
 
@@ -34,7 +28,7 @@ const HomePage = () => {
         title={"Lista de Pokémons"}
         goTo={goToPokedex}
       />
-      <Content>{cardsRendered}</Content>
+      <Content>{cardsRendered()}</Content>
     </Container>
   );
 };
