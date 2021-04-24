@@ -3,11 +3,11 @@ import { useHistory } from "react-router-dom";
 import PokeCard from "../../components/cards/Cards";
 import Header from "../../components/header/Header";
 import ContextPokemons from "../../contexts/contexts";
-import { Container, Content } from "./styled";
+import { Container, Content , DivButtons} from "./styled";
 
 const HomePage = () => {
   const history = useHistory();
-  const { states } = useContext(ContextPokemons);
+  const { states, functions} = useContext(ContextPokemons);
   const [loading, setLoading] = useState(true)
 
   const goToPokedex = () => {
@@ -29,6 +29,10 @@ const HomePage = () => {
         goTo={goToPokedex}
       />
       <Content>{cardsRendered()}</Content>
+      <DivButtons>
+        <button onClick={functions.previousPage}>⬅</button>
+        <button onClick={functions.nextPage}>➡</button>
+      </DivButtons>
     </Container>
   );
 };

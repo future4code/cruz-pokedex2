@@ -29,6 +29,20 @@ function App() {
     removed.splice(pokemonIndex, 1);
     setPokemonsAdded(removed);
   };
+  const nextPage = ()=>{
+    if(pokemonListUrl.next){
+      getApiPokemonListUrl(pokemonListUrl.next.replace('https://pokeapi.co/api/v2/',''),null,(res,setValue)=>{
+        setValue(res.data)
+      })
+    }
+  }
+  const previousPage = ()=>{
+    if(pokemonListUrl.previous){
+      getApiPokemonListUrl(pokemonListUrl.previous.replace('https://pokeapi.co/api/v2/',''),null,(res,setValue)=>{
+        setValue(res.data)
+      })
+    }
+  }
 
   const getPokemons = (i, pokes)=>{
     if(pokemonListUrl && pokemonListUrl.results && pokemonListUrl.results.length>0) {
@@ -81,7 +95,7 @@ function App() {
 
   const states = {pokemons, pokemonsAdded, pokemonDetails}
   const setters ={setPokemons, setPokemonsAdded, setPokemonDetails}
-  const functions = {addPoke, removePoke}
+  const functions = {addPoke, removePoke, nextPage, previousPage}
 
   return (
     <ContextPokemons.Provider value={{ states, setters, functions }}>
