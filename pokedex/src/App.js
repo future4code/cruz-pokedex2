@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import HomePage from "./pages/homePage/HomePage";
 import DetailsPage from "./pages/details/DetailsPage";
 import PokedexPage from "./pages/pokedex//PokedexPage";
+import BattlePage from './pages/battle/BattlePage'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -133,6 +134,9 @@ function App() {
           </Route>
           <Route exact path={"/details"}>
             <DetailsPage />
+          </Route>
+          <Route exact path={'/battle'}>
+            <BattlePage />
           </Route>
         </Switch>
       </BrowserRouter>
