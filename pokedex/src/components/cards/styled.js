@@ -7,7 +7,6 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  border: 3px solid #061740;
   border-radius: 8px;
   background: rgb(23, 78, 179);
   background: radial-gradient(
@@ -22,6 +21,8 @@ export const CardContainer = styled.div`
     color: white;
     text-transform: uppercase;
   }
+  box-shadow: ${props=>props.selected? ('5px 5px 10px black') : ('none')};
+  border: ${props=>props.selected?('3px solid red'):('3px solid #061740')};
 `;
 
 export const PokeImgs = styled.img`

@@ -4,6 +4,8 @@
     <list default="true" id="895ffc71-1328-4b40-8a58-1dd15fb70f5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/Cards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
       <workItem from="1618876500192" duration="156000" />
       <workItem from="1618934690370" duration="2377000" />
       <workItem from="1619186319863" duration="1068000" />
-      <workItem from="1619313060917" duration="1458000" />
+      <workItem from="1619313060917" duration="3827000" />
     </task>
     <servers />
   </component>
@@ -74,6 +76,28 @@
             </State>
           </value>
         </entry>
+        <entry key="acbe68c9-ef75-4471-b7ce-1b4cbfd0329b">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$/../.." />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="acbe68c9-ef75-4471-b7ce-1b4cbfd0329b" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />

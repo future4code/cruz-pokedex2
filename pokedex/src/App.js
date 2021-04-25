@@ -11,6 +11,7 @@ function App() {
   const [pokemons, setPokemons] = useState([])
   const [pokemonsAdded, setPokemonsAdded] = useState([])
   const [pokemonDetails, setPokemonDetails] = useState({})
+  const [battle, setBattle] = useState([])
 
   const addPoke = (pokemon) => {
     const newList = [...pokemonsAdded, pokemon];
@@ -116,8 +117,8 @@ function App() {
     }
   },[pokemons])
 
-  const states = {pokemons, pokemonsAdded, pokemonDetails}
-  const setters ={setPokemons, setPokemonsAdded, setPokemonDetails}
+  const states = {pokemons, pokemonsAdded, pokemonDetails, battle}
+  const setters ={setPokemons, setPokemonsAdded, setPokemonDetails, setBattle}
   const functions = {addPoke, removePoke, nextPage, previousPage}
 
   return (
