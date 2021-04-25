@@ -47,6 +47,15 @@ function App() {
   const getPokemons = (i, pokes)=>{
     if(pokemonListUrl && pokemonListUrl.results && pokemonListUrl.results.length>0) {
       if (i === pokemonListUrl.results.length){
+        if(pokemonsAdded.length>0){
+          pokemonsAdded.forEach((pokeAdd, index)=>{
+            pokes.forEach((poke,i)=>{
+              if(pokeAdd.name === poke.name){
+                pokes.splice(i, 1)
+              }
+            })
+          })
+        }
         setPokemons(pokes)
         return
       }
@@ -92,6 +101,20 @@ function App() {
       getPokemons(0, pokes)
     }
   },[pokemonListUrl])
+
+  useEffect(()=>{
+    if(pokemonsAdded.length>0){
+      const pokes = [...pokemons]
+      pokemonsAdded.forEach((pokeAdd, index)=>{
+        pokes.forEach((poke,i)=>{
+          if(pokeAdd.name === poke.name){
+            pokes.splice(i, 1)
+          }
+        })
+      })
+      // setPokemons(pokes)
+    }
+  },[pokemons])
 
   const states = {pokemons, pokemonsAdded, pokemonDetails}
   const setters ={setPokemons, setPokemonsAdded, setPokemonDetails}
