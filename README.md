@@ -19,3 +19,4 @@ Funcionalidades:
 - Ver detalhes do pokémon
 - Desafio 1: Cumprido. Pode ir tanto para frente como para trás nas lista de pokémons
 - Desafio 2: Cumprido. Basta clicar em dois pokémons para abrir a batalha
+- Persistência dos dados no localStorage
