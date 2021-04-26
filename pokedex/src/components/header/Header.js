@@ -5,12 +5,14 @@ import { HeaderContainer } from "./styled";
 const Header = (props) => {
   return (
     <HeaderContainer>
-      <button type="button" onClick={props.goTo}>
+      <div><button type="button" onClick={props.goTo}>
         {props.buttonTitle}
-      </button>
+      </button></div>
       <h1>{props.title}</h1>
-      {props.details && (
-        <button onClick={props.addRemove}>Adicionar/Remover da pokedex</button>
+      {props.details? (
+        <div><button onClick={props.addRemove}>Adicionar/Remover da pokedex</button></div>
+      ):(
+        <div></div>
       )}
     </HeaderContainer>
   );

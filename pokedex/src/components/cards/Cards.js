@@ -42,8 +42,8 @@ const PokeCard = (props) => {
   }
 
   return (
-    <CardContainer selected={selected} onClick={onClickContainer}>
-      <PokeImgs alt={props.poke.name} src={props.poke.imageFront} />
+    <CardContainer selected={selected} >
+      <PokeImgs alt={props.poke.name} src={props.poke.imageFront} onClick={onClickContainer}/>
       <p>{props.poke.name}</p>
       <ButtonContainer>
         {props.home ? (
