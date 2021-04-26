@@ -69,8 +69,8 @@ export default function BattlePage(){
           buttonTitle={"Voltar"}
         />
         <DivPokes>
-        <PokeCard key={1} poke={poke1} title={"Adicionar na pokedex"} />
-        <PokeCard key={2} poke={poke2} title={"Adicionar na pokedex"} />
+        <PokeCard key={1} poke={poke1} battle/>
+        <PokeCard key={2} poke={poke2} battle/>
         </DivPokes>
         {vencedor()}
       </>

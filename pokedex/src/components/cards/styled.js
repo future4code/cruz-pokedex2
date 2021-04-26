@@ -35,7 +35,7 @@ export const PokeImgs = styled.img`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 50px;
@@ -49,8 +49,10 @@ export const ButtonContainer = styled.div`
     width: 49%;
     height: 100%;
     box-sizing: border-box;
+    margin: 5px;
   }
   a {
+    margin: 5px;
     box-sizing: border-box;
     width: 49%;
     height: 100%;
