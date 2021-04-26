@@ -96,14 +96,20 @@ function App() {
     getApiPokemonListUrl('pokemon?limit=20', null, (res, setValue)=>{
       setValue(res.data)
     })
+    const pokesAdd = window.localStorage.getItem('pokesAdd')
+    if(pokesAdd){
+      setPokemonsAdded(JSON.parse(pokesAdd))
+    }
   },[])
+  useEffect(()=>{
+    window.localStorage.setItem('pokesAdd', JSON.stringify(pokemonsAdded))
+  },[pokemonsAdded])
   useEffect(()=>{
     if(pokemonListUrl && pokemonListUrl.results) {
       const pokes = []
       getPokemons(0, pokes)
     }
   },[pokemonListUrl])
-
   useEffect(()=>{
     if(pokemonsAdded.length>0){
       const pokes = [...pokemons]
