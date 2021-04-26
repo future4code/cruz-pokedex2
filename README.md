@@ -20,3 +20,4 @@ Funcionalidades:
 - Desafio 1: Cumprido. Pode ir tanto para frente como para trás nas lista de pokémons
 - Desafio 2: Cumprido. Basta clicar em dois pokémons para abrir a batalha
 - Persistência dos dados no localStorage
+- Se tentar acessar a página de detalhes e a página de batalha direto pela url, ou seja, sem os pokémons previamente escolhidos, o site não permitirá
