@@ -17,12 +17,20 @@ export const HeaderContainer = styled.div`
   position: fixed;
 
   h1 {
-    position: absolute;
-    right: 500px;
     color: white;
     font-size: 40px;
     text-shadow: 0 0 0.2em black;
   }
+  
+  >div{
+    width: 300px;
+    max-width: 300px;
+    :nth-child(3){
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  
   button {
     padding: 8px;
     font-weight: bold;

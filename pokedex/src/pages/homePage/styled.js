@@ -20,3 +20,12 @@ export const Content = styled.div`
   justify-content: space-around;
   margin-top: 80px;
 `;
+
+export const DivButtons = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  >button{
+    padding: 5px 10px;
+  }
+`

@@ -6,8 +6,9 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin: 10px;
-  border: 3px solid #061740;
+  padding: 10px;
   border-radius: 8px;
   background: rgb(23, 78, 179);
   background: radial-gradient(
@@ -22,21 +23,22 @@ export const CardContainer = styled.div`
     color: white;
     text-transform: uppercase;
   }
+  box-shadow: ${props=>props.selected? ('5px 5px 10px black') : ('none')};
+  border: ${props=>props.selected?('3px solid red'):('3px solid #061740')};
 `;
 
 export const PokeImgs = styled.img`
   width: 100%;
   height: 200px;
+  cursor: pointer;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  height: 35px;
-  padding: 10px;
+  width: 100%;
+  height: 50px;
   button {
     cursor: pointer;
     padding: 5px;
@@ -44,13 +46,22 @@ export const ButtonContainer = styled.div`
     color: white;
     background-color: #2480a7;
     border: 1px solid green;
+    width: 49%;
+    height: 100%;
+    box-sizing: border-box;
   }
   a {
+    box-sizing: border-box;
+    width: 49%;
+    height: 100%;
+    padding: 5px;
     text-decoration: none;
     color: white;
     background-color: #2480a7;
     font-weight: 500;
-    padding: 2px 0;
     border: 1px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

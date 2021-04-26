@@ -18,3 +18,12 @@ export const useGetApi = () => {
 
   return [value, getApi];
 };
+
+export const getApi = async (endpoint, config, callbackOk, callbackError) => {
+  try {
+    const res = await axios.get(`${baseUrl}${endpoint}`, config);
+    if (typeof callbackOk === "function") callbackOk(res);
+  } catch (err) {
+    if (typeof callbackError === "function") callbackError(err);
+  }
+};
