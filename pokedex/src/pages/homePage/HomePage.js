@@ -7,7 +7,7 @@ import { Container, Content , DivButtons} from "./styled";
 
 const HomePage = () => {
   const history = useHistory();
-  const { states, functions} = useContext(ContextPokemons);
+  const { states, functions, setters} = useContext(ContextPokemons);
   const [loading, setLoading] = useState(true)
 
   const goToPokedex = () => {
@@ -20,6 +20,10 @@ const HomePage = () => {
       return <PokeCard key={index} home poke={poke} title={"Adicionar na pokedex"} />;
     });
   }
+
+  useEffect(()=>{
+    setters.setBattle([])
+  },[])
 
   return (
     <Container>

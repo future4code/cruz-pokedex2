@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 export default function BattlePage(){
-  const {states, setters} = useContext(ContextPokemons)
+  const {states} = useContext(ContextPokemons)
   const history = useHistory()
   const {battle} = states
   const [poke1,poke2] = battle
