@@ -19,6 +19,10 @@ export default function DetailsPage() {
   const { pokemonDetails } = states;
   const { addPoke, removePoke } = functions;
 
+  if(!pokemonDetails.name){
+    history.goBack()
+  }
+
   const typesRendered = pokemonDetails.types.map((type) => {
     return <p>{type}</p>;
   });
@@ -83,14 +87,14 @@ export default function DetailsPage() {
 
   return (
     <Container>
-      <Header
-        title={pokemonDetails.name}
-        details={true}
-        goTo={() => history.goBack()}
-        buttonTitle={"Voltar"}
-        addRemove={addRemove}
-      />
-      {allRendered}
+        <Header
+          title={pokemonDetails.name}
+          details={true}
+          goTo={() => history.goBack()}
+          buttonTitle={"Voltar"}
+          addRemove={addRemove}
+        />
+        {allRendered}
     </Container>
   );
 }
